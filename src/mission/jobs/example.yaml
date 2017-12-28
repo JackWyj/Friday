@@ -1,0 +1,16 @@
+object: 'Rocketbox'
+load: 'rocketbox-job'
+ignore: 0              # switch for this job, ignore = 0 means executing this job,
+                       # or ignore = 1 means no executing.
+src_file: '/the/path/of/your/src/file/'
+tmp_dir: '/the/path/of/your/temp/file/on/every/node/in/this/file/'
+transit:
+  - node: 'rocketbox'  # the transit nodes for transfer file
+    tmp_dir: '/two/'
+target:
+  - node: 'proxy0'     # the target node to transfer file to
+    dst_file: '/the/target/path/'  # target path
+  - node: 'proxy1'
+    dst_file: '/the/target/path/'
+
+
